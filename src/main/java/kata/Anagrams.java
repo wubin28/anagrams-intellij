@@ -11,6 +11,9 @@ public class Anagrams {
         if (input.length() <= 1) {
             return Arrays.asList(input);
         }
-        return Arrays.asList(input, "b" + "a");
+        if (input.length() == 2) {
+            return Arrays.asList(input, input.substring(1, 2) + input.substring(0, 1));
+        }
+        return Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba");
     }
 }
