@@ -1,5 +1,6 @@
 package kata;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,15 +15,18 @@ public class Anagrams {
         if (input.length() == 2) {
             return Arrays.asList(input, input.substring(1, 2) + input.substring(0, 1));
         }
-        return Arrays.asList(
-                input.substring(0, 1) + of(dropChar(input, 0)).get(0),
-                input.substring(0, 1) + of(dropChar(input, 0)).get(1),
+        List<String> result = new ArrayList<String>();
 
-                input.substring(1, 2) + of(dropChar(input, 1)).get(0),
-                input.substring(1, 2) + of(dropChar(input, 1)).get(1),
+        result.add(input.substring(0, 1) + of(dropChar(input, 0)).get(0));
+        result.add(input.substring(0, 1) + of(dropChar(input, 0)).get(1));
 
-                input.substring(2, 3) + of(dropChar(input, 2)).get(0),
-                input.substring(2, 3) + of(dropChar(input, 2)).get(1));
+        result.add(input.substring(1, 2) + of(dropChar(input, 1)).get(0));
+        result.add(input.substring(1, 2) + of(dropChar(input, 1)).get(1));
+
+        result.add(input.substring(2, 3) + of(dropChar(input, 2)).get(0));
+        result.add(input.substring(2, 3) + of(dropChar(input, 2)).get(1));
+
+        return result;
     }
 
     private static String dropChar(String input, int index) {
