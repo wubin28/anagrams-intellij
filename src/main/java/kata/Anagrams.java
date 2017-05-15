@@ -17,14 +17,10 @@ public class Anagrams {
         }
         List<String> result = new ArrayList<String>();
 
-        result.add(input.substring(0, 1) + of(dropChar(input, 0)).get(0));
-        result.add(input.substring(0, 1) + of(dropChar(input, 0)).get(1));
-
-        result.add(input.substring(1, 2) + of(dropChar(input, 1)).get(0));
-        result.add(input.substring(1, 2) + of(dropChar(input, 1)).get(1));
-
-        result.add(input.substring(2, 3) + of(dropChar(input, 2)).get(0));
-        result.add(input.substring(2, 3) + of(dropChar(input, 2)).get(1));
+        for (int i = 0; i < 3; i++) {
+            result.add(input.substring(i, i + 1) + of(dropChar(input, i)).get(0));
+            result.add(input.substring(i, i + 1) + of(dropChar(input, i)).get(1));
+        }
 
         return result;
     }
