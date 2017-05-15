@@ -18,11 +18,11 @@ public class Anagrams {
                 input.substring(0, 1) + of(dropChar(input, 0)).get(0),
                 input.substring(0, 1) + of(dropChar(input, 0)).get(1),
 
-                input.substring(1, 2) + "ac",
-                input.substring(1, 2) + "ca",
+                input.substring(1, 2) + of(dropChar(input, 1)).get(0),
+                input.substring(1, 2) + of(dropChar(input, 1)).get(1),
 
-                input.substring(2, 3) + "ab",
-                input.substring(2, 3) + "ba");
+                input.substring(2, 3) + of(dropChar(input, 2)).get(0),
+                input.substring(2, 3) + of(dropChar(input, 2)).get(1));
     }
 
     private static String dropChar(String input, int index) {
