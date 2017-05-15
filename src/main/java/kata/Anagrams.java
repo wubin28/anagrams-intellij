@@ -12,9 +12,6 @@ public class Anagrams {
         if (input.length() <= 1) {
             return Arrays.asList(input);
         }
-        if (input.length() == 2) {
-            return Arrays.asList(input, input.substring(1, 2) + input.substring(0, 1));
-        }
         List<String> result = new ArrayList<String>();
 
         for (int i = 0; i < input.length(); i++) {
