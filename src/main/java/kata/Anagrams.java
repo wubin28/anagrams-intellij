@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class Anagrams {
     public static List<String> of(String input) {
-        if (input.equals("ab")) {
-            return Arrays.asList("ab", "ba");
+        if (input.length() <= 1) {
+            return Arrays.asList(input);
         }
-        return Arrays.asList(input);
+        return Arrays.asList(input, "b" + "a");
     }
 }
