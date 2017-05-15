@@ -22,4 +22,9 @@ public class AnagramsTest {
     public void the_number_of_the_anagram_of_a_two_letter_string_should_be_2() {
         assertThat(Anagrams.of("ab"), is(Arrays.asList("ab", "ba")));
     }
+
+    @Test
+    public void the_number_of_the_anagram_of_a_three_letter_string_should_be_6() {
+        assertThat(Anagrams.of("abc"), is(Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba")));
+    }
 }
