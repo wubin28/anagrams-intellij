@@ -32,4 +32,9 @@ public class AnagramsTest {
     public void the_number_of_the_anagram_of_a_four_letter_string_should_be_24() {
         assertThat(Anagrams.of("abcd").size(), is(24));
     }
+
+    @Test
+    public void the_number_of_the_anagram_of_a_five_letter_string_should_be_120() {
+        assertThat(Anagrams.of("abcde").size(), is(120));
+    }
 }
